@@ -1,0 +1,79 @@
+Project Summary
+Project Overview
+This project is a user authentication system with a password reset feature, allowing users to register, log in, and reset their passwords. It utilizes various technologies to ensure security, efficiency, and user-friendly interactions.
+
+Technologies Used
+Node.js: Backend JavaScript runtime for building server-side applications.
+Express: Web application framework for Node.js to create API routes easily.
+MongoDB: NoSQL database for storing user information.
+Mongoose: ODM (Object Data Modeling) library for MongoDB to manage data.
+JWT (JSON Web Token): For secure token-based authentication.
+Nodemailer: For sending emails, specifically for password reset links.
+Bcrypt: For hashing passwords securely.
+Dotenv: To manage environment variables.
+API Endpoints
+1. User Registration
+Endpoint: /api/user/register
+Method: POST
+Description: Allows new users to register by providing their email and password.
+2. User Login
+Endpoint: /api/user/login
+Method: POST
+Description: Authenticates users by verifying their email and password.
+3. Request Password Reset
+Endpoint: /api/user/request-reset-password
+Method: POST
+Description: Sends a password reset link to the user's email if the email is registered.
+4. Reset Password
+Endpoint: /api/user/reset-password/:id/:token
+Method: POST
+Description: Resets the user's password after verifying the token and user ID. Requires new password and password confirmation.
+Functionality Overview
+User Registration: Users can register by submitting their email and password, which are stored securely in the database.
+
+User Login: Registered users can log in using their email and password, generating a JWT token for authenticated sessions.
+
+Password Reset Request: Users can request a password reset by providing their registered email. An email with a reset link is sent to them.
+
+Password Reset: Users can reset their password by clicking the link in the email, verifying the token, and providing a new password.
+
+Security Measures
+Passwords are hashed using Bcrypt before being stored in the database to enhance security.
+JWT is used for maintaining authenticated user sessions.
+Nodemailer securely sends password reset emails to users.
+Conclusion
+This project effectively implements user authentication and password management features using modern technologies and practices, ensuring a secure and user-friendly experience.
+
+
+Command for AI Tools
+Command:
+
+Develop a Frontend Application for User Authentication
+
+Create a frontend application that provides user authentication features, including registration, login, and password reset functionalities. The backend APIs are already implemented and the endpoints are provided below:
+
+API Endpoints:
+
+User Registration
+Endpoint: /api/user/register
+Method: POST
+User Login
+Endpoint: /api/user/login
+Method: POST
+Request Password Reset
+Endpoint: /api/user/request-reset-password
+Method: POST
+Reset Password
+Endpoint: /api/user/reset-password/:id/:token
+Method: POST
+Requirements:
+
+Implement responsive UI components for user registration, login, and password reset.
+Use appropriate form validation and error handling for user inputs.
+Make API calls to the endpoints mentioned above to handle user authentication.
+Ensure the application is user-friendly and visually appealing.
+Utilize a framework like React, Vue, or Angular for the frontend development.
+Additional Notes
+Ensure to maintain proper security measures while handling user data.
+Consider using libraries like Axios or Fetch API for making HTTP requests.
+Design the user interface with a focus on accessibility and usability.

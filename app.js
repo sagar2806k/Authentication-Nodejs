@@ -7,7 +7,7 @@ import connectDB from './config/connectdb.js' // Import the database connection 
 import userRoutes from './routes/userRoutes.js'
 
 const app = express();
-const port = process.env.PORT || 8000; // Set the port (default 8000)
+const port = process.env.PORT || 8080; // Set the port (default 8000)
 const DATABASE_URL = process.env.DATABASE_URL; // Get database URL from environment variables
 
 // CORS policy middleware
